@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7428e875-63f0-46c5-81f0-e6a52d520002",
+		"_postman_id": "b88c3472-1606-4a14-ba0e-ec5b32c6323e",
 		"name": "API_PW",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -19,6 +19,53 @@
 					"port": "3002",
 					"path": [
 						"predios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Salas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/salas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD Sala",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"numero\": 511,\n        \"descricao\": \"Laboratório\",\n        \"capacidade\": 12,\n        \"predio\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/salas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas"
 					]
 				}
 			},
@@ -81,6 +128,34 @@
 			"response": []
 		},
 		{
+			"name": "UPDATE Sala",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n        \"codigo\": 5,\n        \"numero\": 511,\n        \"descricao\": \"Laboratório\",\n        \"capacidade\": 12,\n        \"predio\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/salas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "DELETE Predio",
 			"request": {
 				"method": "DELETE",
@@ -101,6 +176,26 @@
 			"response": []
 		},
 		{
+			"name": "DELETE Sala",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/salas/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GET por codigo",
 			"request": {
 				"method": "GET",
@@ -115,6 +210,26 @@
 					"path": [
 						"predios",
 						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET sala por codigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/salas/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas",
+						"5"
 					]
 				}
 			},
